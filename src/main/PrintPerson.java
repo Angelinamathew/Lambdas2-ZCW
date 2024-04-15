@@ -1,9 +1,10 @@
 import java.util.List;
 
 public class PrintPerson {
-    public static void printPersonsOlderThan(List<Person> roster, int age) {
+    public static void printPerson(
+            List<Person> roster, CheckPerson tester) {
         for (Person p : roster) {
-            if (p.getAge() >= age) {
+            if (tester.test(p)) {
                 p.printPerson();
             }
         }
