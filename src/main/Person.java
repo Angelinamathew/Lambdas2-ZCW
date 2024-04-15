@@ -1,4 +1,6 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Person {
 
@@ -13,6 +15,7 @@ public class Person {
     String emailAddress;
     Sex sex;
     int age;
+    List<Person> roster = new ArrayList<>();
 
     public Sex getSex() {
         return this.sex;
@@ -63,6 +66,6 @@ public class Person {
     }
 
     public void printPerson() {
-        // ...
+        System.out.println("Person name: " + this.name);
     }
 }
